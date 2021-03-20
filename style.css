@@ -1,0 +1,174 @@
+/* designed by dk_vaja */
+
+:root {
+  --light: #dff2d8;
+  --red: #fe0c00;
+}
+
+* {
+  outline-style: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  user-select: none;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body::before {
+  content: "";
+  background: url("bg.jpg") no-repeat center/cover;
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+#header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 10px;
+}
+#logo {
+  display: flex;
+  margin-right: 500px;
+}
+#img-logo {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar ul {
+  display: flex;
+}
+#navbar ul li {
+  list-style: none;
+}
+#navbar ul li a {
+  text-decoration: none;
+  padding: 0px 20px;
+  color: var(--red);
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+#navbar ul li a:hover {
+  color: var(--light);
+}
+
+#heading {
+  /* background-color: indigo; */
+  margin-top: 116px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--red);
+}
+#heading h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 6px;
+}
+#heading p {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0rem 1.1rem;
+  font-weight: bold;
+}
+
+.text-shadow {
+  text-shadow: 5px 5px 35px black;
+}
+
+.button {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.btn {
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  background-color: rgb(252, 164, 0);
+  cursor: pointer;
+  /* font-style: italic; */
+}
+.btn:active {
+  transform: scale(0.9);
+  transition: all 0.1s 0s ease-in-out;
+}
+
+.payment-button {
+  height: 40vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: #fe0c00;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  #header {
+    padding: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #logo {
+    margin: 1rem;
+  }
+  #navbar ul {
+    text-align: center;
+    justify-content: center;
+  }
+  #navbar ul li a {
+    margin: 10px 0px;
+    padding: 0px 10px;
+    font-size: 1.1rem;
+  }
+  #heading h1 {
+    font-size: 1.8rem;
+  }
+  #heading p {
+    font-size: 0.99rem;
+    font-weight: normal;
+    padding: 0px 0.4rem;
+  }
+}
